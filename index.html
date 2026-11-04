@@ -52,12 +52,18 @@ footer{margin-top:25px;border-top:1px solid var(--line);padding:28px 0;color:var
 <div id="biologyMenu" style="display:none; padding:20px; background:#eef8ff; border-radius:12px; margin:15px 0;">
   <h2>Explore Biology</h2>
   <p>Choose the Biology resource you need:</p>
-  <button>Official Biology Syllabuses</button>
+  <button onclick="document.getElementById('syllabusMenu').style.display='block'">Official Biology Syllabuses</button>
   <button>Exam-Ready Biology Notes</button>
   <button>Past Papers &amp; Worked Solutions</button>
   <button>Exam Practice by Topic</button>
   <button>Topic-Wise Past Papers</button>
   <button>Year-Wise Past Papers</button>
+<div id="syllabusMenu" style="display:none; margin:10px 0; padding:15px; background:white; border-radius:8px;">
+  <h3>Choose Your Biology Syllabus</h3>
+  <p><a href="https://www.cambridgeinternational.org/programmes-and-qualifications/cambridge-igcse-biology-0610/" target="_blank">Cambridge IGCSE Biology</a></p>
+  <p><a href="https://qualifications.pearson.com/" target="_blank">Pearson Edexcel GCSE Biology</a></p>
+  <p><a href="https://www.aqa.org.uk/subjects/science/gcse/biology-8461" target="_blank">AQA GCSE Biology</a></p>
+</div>
 </div>
 </div>
 </div></div></section>
