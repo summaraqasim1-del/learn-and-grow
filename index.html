@@ -90,7 +90,8 @@ const resources = [{title:"Sort the Animals",subject:"Science",grade:"Early Year
 {title:"Listen, Match & Act!",subject:"English",grade:"Grade 1",desc:"Listen to sounds, match pictures, repeat words and mime actions.",file:"Grade_1_English_Sound_Picture_Match_Worksheet.pdf",icon:"🎵",color:"pink"},
 {title:"Number Adventure!",subject:"Mathematics",grade:"Grade 1",desc:"Recognise numbers 1–10 by counting objects and completing a number ladder.",file:"Grade_1_Maths_Number_Recognition_1_to_10.pdf",icon:"🔢",color:"blue"},
 {title:"Cambridge IGCSE Biology Syllabus",subject:"Biology",grade:"IGCSE",desc:"Official Cambridge Biology syllabus for examination years 2026–2028. View the syllabus on the Cambridge website.",file:"https://www.cambridgeinternational.org/programmes-and-qualifications/cambridge-igcse-biology-0610/",icon:"🧬",color:"green"},
-let selectedSubject="",selectedGrade="",searchTerm="";
+];
+  let selectedSubject="",selectedGrade="",searchTerm="";
 const grid=document.getElementById("resourceGrid");
 function escapeHtml(s){return s.replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));}
 function actionFor(r){
