@@ -1,1 +1,4 @@
+User-agent: *
+Allow: /
 
+Sitemap: https://summaraqasim1-del.github.io/learn-and-grow/sitemap.xml
