@@ -211,9 +211,6 @@ keywords: "writing setting adjectives weather place time describing sentences gr
   color: "blue",
   keywords: "EY1 maths shapes patterns position order"
 }];
-  
-
-   ];
   let selectedSubject="",selectedGrade="",searchTerm="";
 const grid=document.getElementById("resourceGrid");
 function escapeHtml(s){return s.replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));}
@@ -221,7 +218,7 @@ function actionFor(r){
   if(r.file){return '<a class="download" href="'+encodeURI(r.file)+'" target="_blank" rel="noopener">📄 Open worksheet</a>';}
   return '<button class="download" data-index="'+resources.indexOf(r)+'">＋ View activity</button>';
 }
-const worksheetPreviews = {"Grade 1 Worksheet 1 Clean Body Healthy Me.pdf": "grade-1-worksheet-1-clean-body-healthy-me.jpg", "Grade_1_English_Sound_Picture_Match_Worksheet.pdf": "grade-1-english-sound-picture-match-worksheet.jpg", "Grade_1_Maths_Number_Recognition_1_to_10.pdf": "grade-1-maths-number-recognition-1-to-10.jpg", "Grade_1_Worksheet_2_Clean_Places_Happy_Faces.pdf": "grade-1-worksheet-2-clean-places-happy-faces.jpg", "Sort the Animals .pdf": "sort-the-animals.jpg", "The_Little_Seed_Booklet.pdf": "the-little-seed-booklet.jpg", "Urdu_Worksheet_1_Meet_the_Letters.pdf": "urdu-worksheet-1-meet-the-letters.jpg", "Urdu_Worksheet_2_Matching_Letters_to_Pictures.pdf": "urdu-worksheet-2-matching-letters-to-pictures.jpg", "friends-circle-worksheet.pdf": "friends-circle-worksheet.jpg", "grade1-all-about-me.pdf": "grade1-all-about-me.jpg", "Grade_3_English_Writing_a_Setting_Worksheet.pdf": "grade-3-english-writing-a-setting.jpg","Little_by_Little_EY1_Maths_Week_1_Fixed.pdf": "ey1-maths-week-1.jpg";
+const worksheetPreviews = {"Grade 1 Worksheet 1 Clean Body Healthy Me.pdf": "grade-1-worksheet-1-clean-body-healthy-me.jpg", "Grade_1_English_Sound_Picture_Match_Worksheet.pdf": "grade-1-english-sound-picture-match-worksheet.jpg", "Grade_1_Maths_Number_Recognition_1_to_10.pdf": "grade-1-maths-number-recognition-1-to-10.jpg", "Grade_1_Worksheet_2_Clean_Places_Happy_Faces.pdf": "grade-1-worksheet-2-clean-places-happy-faces.jpg", "Sort the Animals.pdf": "sort-the-animals.jpg", "The_Little_Seed_Booklet.pdf": "the-little-seed-booklet.jpg", "Urdu_Worksheet_1_Meet_the_Letters.pdf": "urdu-worksheet-1-meet-the-letters.jpg", "Urdu_Worksheet_2_Matching_Letters_to_Pictures.pdf": "urdu-worksheet-2-matching-letters-to-pictures.jpg", "friends-circle-worksheet.pdf": "friends-circle-worksheet.jpg", "grade1-all-about-me.pdf": "grade1-all-about-me.jpg", "Grade_3_English_Writing_a_Setting_Worksheet.pdf": "grade-3-english-writing-a-setting.jpg","Little_by_Little_EY1_Maths_Week_1_Fixed.pdf": "ey1-maths-week-1.jpg"};
 function render(){
   const filtered=resources.filter(r=>(!selectedSubject||r.subject===selectedSubject)&&(!selectedGrade||(selectedGrade==="Grade 1–2"?["Grade 1–2","Grade 1","Nursery / KG"].includes(r.grade):selectedGrade==="Early Years"?r.grade==="Early Years":r.grade===selectedGrade))&&(!searchTerm||(r.title+" "+r.subject+" "+r.grade+" "+r.desc+" "+r.keywords).toLowerCase().includes(searchTerm)));
   document.getElementById("resultCount").textContent=filtered.length+" resource"+(filtered.length===1?"":"s");
